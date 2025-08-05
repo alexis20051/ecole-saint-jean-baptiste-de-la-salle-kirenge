@@ -1,0 +1,9 @@
+  =>   Name    : De la Salle kirenge
+
+  =>   Link    : https://htmlcodex.com/
+
+  =>  License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+
+  =>   Author  : HTML Codex
+
+  =>  Author Website   : https://htmlcodex.com
