@@ -116,3 +116,47 @@
     }
   }
 }
+//
+// Responsive styles
+//
+
+// Example: Adjust accordion padding and font-size on smaller screens
+@media (max-width: 575.98px) {
+  .accordion-button {
+    padding: $accordion-button-padding-y-sm $accordion-button-padding-x-sm;
+    @include font-size($font-size-sm);
+  }
+  .accordion-body {
+    padding: $accordion-body-padding-y-sm $accordion-body-padding-x-sm;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .accordion-button {
+    padding: $accordion-button-padding-y-md $accordion-button-padding-x-md;
+    @include font-size($font-size-base);
+  }
+  .accordion-body {
+    padding: $accordion-body-padding-y-md $accordion-body-padding-x-md;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .accordion-button {
+    padding: $accordion-button-padding-y-lg $accordion-button-padding-x-lg;
+    @include font-size($font-size-lg);
+  }
+  .accordion-body {
+    padding: $accordion-body-padding-y-lg $accordion-body-padding-x-lg;
+  }
+}
+
+@media (min-width: 992px) {
+  .accordion-button {
+    padding: $accordion-button-padding-y $accordion-button-padding-x;
+    @include font-size($font-size-base);
+  }
+  .accordion-body {
+    padding: $accordion-body-padding-y $accordion-body-padding-x;
+  }
+}

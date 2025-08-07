@@ -238,3 +238,12 @@
     color: $dropdown-dark-header-color;
   }
 }
+@each $breakpoint, $value in $grid-breakpoints {
+  @include media-breakpoint-up($breakpoint) {
+    .dropdown-menu-#{$breakpoint} {
+      min-width: map-get($dropdown-min-widths, $breakpoint, $dropdown-min-width);
+      font-size: map-get($dropdown-font-sizes, $breakpoint, $dropdown-font-size);
+      padding: map-get($dropdown-paddings, $breakpoint, $dropdown-padding-y) map-get($dropdown-paddings-x, $breakpoint, $dropdown-padding-x);
+    }
+  }
+}

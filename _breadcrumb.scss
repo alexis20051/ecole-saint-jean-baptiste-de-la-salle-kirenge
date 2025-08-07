@@ -26,3 +26,72 @@
     color: $breadcrumb-active-color;
   }
 }
+@media (max-width: 575.98px) {
+  .breadcrumb {
+    padding: ($breadcrumb-padding-y * 0.5) ($breadcrumb-padding-x * 0.5);
+    font-size: ($breadcrumb-font-size * 0.9);
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: ($breadcrumb-item-padding-x * 0.5);
+
+    &::before {
+      padding-right: ($breadcrumb-item-padding-x * 0.5);
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .breadcrumb {
+    padding: ($breadcrumb-padding-y * 0.75) ($breadcrumb-padding-x * 0.75);
+    font-size: ($breadcrumb-font-size * 0.95);
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: ($breadcrumb-item-padding-x * 0.75);
+
+    &::before {
+      padding-right: ($breadcrumb-item-padding-x * 0.75);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .breadcrumb {
+    padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+    font-size: $breadcrumb-font-size;
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: $breadcrumb-item-padding-x;
+
+    &::before {
+      padding-right: $breadcrumb-item-padding-x;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .breadcrumb {
+    padding: ($breadcrumb-padding-y * 1.1) ($breadcrumb-padding-x * 1.1);
+    font-size: ($breadcrumb-font-size * 1.05);
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: ($breadcrumb-item-padding-x * 1.1);
+
+    &::before {
+      padding-right: ($breadcrumb-item-padding-x * 1.1);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .breadcrumb {
+    padding: ($breadcrumb-padding-y * 1.2) ($breadcrumb-padding-x * 1.2);
+    font-size: ($breadcrumb-font-size * 1.1);
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: ($breadcrumb-item-padding-x * 1.2);
+
+    &::before {
+      padding-right: ($breadcrumb-item-padding-x * 1.2);
+    }
+  }
+}

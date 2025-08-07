@@ -39,3 +39,15 @@
     }
   }
 }
+@each $breakpoint, $value in $grid-breakpoints {
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    .container,
+    .container-#{$breakpoint} {
+      width: 100%;
+      padding-right: $container-padding-x;
+      padding-left: $container-padding-x;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

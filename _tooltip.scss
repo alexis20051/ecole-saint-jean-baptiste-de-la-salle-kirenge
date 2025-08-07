@@ -113,3 +113,46 @@
   background-color: $tooltip-bg;
   @include border-radius($tooltip-border-radius);
 }
+@media (max-width: 575.98px) {
+  .tooltip-inner {
+    max-width: 90vw;
+    font-size: $tooltip-font-size * 0.9;
+    padding: $tooltip-padding-y * 0.8 $tooltip-padding-x * 0.8;
+  }
+  .tooltip {
+    margin: $tooltip-margin * 0.5;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .tooltip-inner {
+    max-width: 80vw;
+    font-size: $tooltip-font-size * 0.95;
+    padding: $tooltip-padding-y * 0.9 $tooltip-padding-x * 0.9;
+  }
+  .tooltip {
+    margin: $tooltip-margin * 0.75;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .tooltip-inner {
+    max-width: 60vw;
+    font-size: $tooltip-font-size;
+    padding: $tooltip-padding-y $tooltip-padding-x;
+  }
+  .tooltip {
+    margin: $tooltip-margin;
+  }
+}
+
+@media (min-width: 992px) {
+  .tooltip-inner {
+    max-width: $tooltip-max-width;
+    font-size: $tooltip-font-size;
+    padding: $tooltip-padding-y $tooltip-padding-x;
+  }
+  .tooltip {
+    margin: $tooltip-margin;
+  }
+}

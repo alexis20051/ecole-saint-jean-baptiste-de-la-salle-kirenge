@@ -227,3 +227,78 @@
     color: $carousel-dark-caption-color;
   }
 }
+// Responsive adjustments for carousel
+
+// Small devices (up to 575.98px)
+@media (max-width: 575.98px) {
+  .carousel-caption {
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+  }
+  .carousel-indicators {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 2.5rem;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+// Medium devices (576px to 767.98px)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .carousel-caption {
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    font-size: 1rem;
+  }
+  .carousel-indicators {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 3rem;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+// Large devices (768px and up)
+@media (min-width: 768px) {
+  .carousel-caption {
+    left: (100% - $carousel-caption-width) / 2;
+    right: (100% - $carousel-caption-width) / 2;
+    width: $carousel-caption-width;
+    font-size: 1.25rem;
+  }
+  .carousel-indicators {
+    margin-right: $carousel-control-width;
+    margin-left: $carousel-control-width;
+    margin-bottom: 1rem;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: $carousel-control-width;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: $carousel-control-icon-width;
+    height: $carousel-control-icon-width;
+  }
+}

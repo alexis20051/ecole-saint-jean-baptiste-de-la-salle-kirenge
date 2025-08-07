@@ -213,3 +213,66 @@
     }
   }
 }
+//
+// Responsive adjustments
+//
+
+// Example: Adjust card padding and font-size on smaller screens
+@media (max-width: 575.98px) {
+  .card {
+    font-size: 0.95rem;
+  }
+  .card-body {
+    padding: ($card-spacer-y * 0.75) ($card-spacer-x * 0.75);
+  }
+  .card-header,
+  .card-footer {
+    padding: ($card-cap-padding-y * 0.75) ($card-cap-padding-x * 0.75);
+  }
+}
+
+// Example: Adjust card group layout on extra small screens
+@media (max-width: 575.98px) {
+  .card-group {
+    display: block;
+    > .card {
+      margin-bottom: $card-group-margin;
+      + .card {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// Example: Adjust card image overlay padding on small screens
+@media (max-width: 767.98px) {
+  .card-img-overlay {
+    padding: ($card-img-overlay-padding * 0.75);
+  }
+}
+
+// Example: Adjust card title spacing on small screens
+@media (max-width: 767.98px) {
+  .card-title {
+    margin-bottom: ($card-title-spacer-y * 0.75);
+  }
+  .card-subtitle {
+    margin-top: -($card-title-spacer-y * 0.75) / 2;
+  }
+}
+
+// Example: Adjust card link spacing on small screens
+@media (max-width: 767.98px) {
+  .card-link + .card-link {
+    margin-left: ($card-spacer-x * 0.75);
+  }
+}
+
+// Example: Adjust card header tabs and pills margin on small screens
+@media (max-width: 767.98px) {
+  .card-header-tabs,
+  .card-header-pills {
+    margin-right: -($card-cap-padding-x * 0.25);
+    margin-left: -($card-cap-padding-x * 0.25);
+  }
+}

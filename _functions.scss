@@ -203,3 +203,68 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
 
   @return if($return-calc == true, calc(#{$value1} - #{$value2}), $value1 + unquote(" - ") + $value2);
 }
+/// Media query mixins for responsiveness
+
+// Breakpoints map example (customize as needed)
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Mixin for media-up (min-width)
+@mixin media-breakpoint-up($name) {
+  $min: map-get($grid-breakpoints, $name);
+  @if $min != null and $min != 0 {
+    @media (min-width: #{$min}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Mixin for media-down (max-width)
+@mixin media-breakpoint-down($name) {
+  $max: map-get($grid-breakpoints, $name);
+  @if $max != null {
+    $max: $max - 0.02px;
+    @media (max-width: #{$max}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Mixin for media-between (min-width and max-width)
+@mixin media-breakpoint-between($lower, $upper) {
+  $min: map-get($grid-breakpoints, $lower);
+  $max: map-get($grid-breakpoints, $upper);
+  @if $min != null and $max != null {
+    $max: $max - 0.02px;
+    @media (min-width: #{$min}) and (max-width: #{$max}) {
+      @content;
+    }
+  }
+}
+
+// Mixin for media-only (exact range)
+@mixin media-breakpoint-only($name) {
+  $breakpoints: map-keys($grid-breakpoints);
+  $index: index($breakpoints, $name);
+  $next: if($index != null and $index < length($breakpoints), nth($breakpoints, $index + 1), null);
+
+  @if $next {
+    @include media-breakpoint-between($name, $next) {
+      @content;
+    }
+  } @else {
+    @include media-breakpoint-up($name) {
+      @content;
+    }
+  }
+}

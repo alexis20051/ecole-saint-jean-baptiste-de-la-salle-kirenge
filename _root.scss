@@ -14,3 +14,9 @@
   --#{$variable-prefix}font-monospace: #{inspect($font-family-monospace)};
   --#{$variable-prefix}gradient: #{$gradient};
 }
+/* Responsive breakpoints as CSS custom properties */
+:root {
+  @each $breakpoint, $value in $grid-breakpoints {
+    --#{$variable-prefix}breakpoint-#{$breakpoint}: #{$value};
+  }
+}

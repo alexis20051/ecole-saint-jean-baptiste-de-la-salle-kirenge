@@ -619,3 +619,36 @@ progress {
 [hidden] {
   display: none !important;
 }
+//
+// Responsive utilities
+//
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  // Add your xs responsive styles here
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  // Add your sm responsive styles here
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  // Add your md responsive styles here
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  // Add your lg responsive styles here
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  // Add your xl responsive styles here
+}
+
+// Extra extra large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  // Add your xxl responsive styles here
+}

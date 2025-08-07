@@ -156,3 +156,42 @@
   padding: $popover-body-padding-y $popover-body-padding-x;
   color: $popover-body-color;
 }
+@media (max-width: 575.98px) {
+  .popover {
+    max-width: 90vw;
+    font-size: $font-size-sm;
+  }
+  .popover-header,
+  .popover-body {
+    padding-left: $spacer * 0.5;
+    padding-right: $spacer * 0.5;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .popover {
+    max-width: 300px;
+    font-size: $font-size-base;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .popover {
+    max-width: 350px;
+    font-size: $font-size-base;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .popover {
+    max-width: 400px;
+    font-size: $font-size-lg;
+  }
+}
+
+@media (min-width: 1200px) {
+  .popover {
+    max-width: $popover-max-width;
+    font-size: $popover-font-size;
+  }
+}
